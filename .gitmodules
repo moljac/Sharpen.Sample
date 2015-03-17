@@ -1,0 +1,12 @@
+[submodule "contrib/office-mover-5000"]
+	path = contrib/office-mover-5000
+	url = https://github.com/firebase/office-mover-5000.git
+[submodule "contrib/AndroidChat"]
+	path = contrib/AndroidChat
+	url = https://github.com/firebase/AndroidChat.git
+[submodule "contrib/AndroidDrawing"]
+	path = contrib/AndroidDrawing
+	url = https://github.com/firebase/AndroidDrawing.git
+[submodule "contrib/firebase-login-demo-android"]
+	path = contrib/firebase-login-demo-android
+	url = https://github.com/firebase/firebase-login-demo-android.git
