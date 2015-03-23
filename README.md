@@ -50,6 +50,8 @@ Thanks to:
 		*	did not make it to work TODO
 3.	xes XML encoded source
 	[http://xes.sourceforge.net/](http://xes.sourceforge.net/)
+	[http://www.euclideanspace.com/software/language/xes/userGuide/index.htm](http://www.euclideanspace.com/software/language/xes/userGuide/index.htm)
+	[http://www.euclideanspace.com/software/language/xes/userGuide/convert/javaToCSharp/](http://www.euclideanspace.com/software/language/xes/userGuide/convert/javaToCSharp/)
 	*	pros
 		*	free
 	*	cons
