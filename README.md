@@ -21,3 +21,47 @@ Thanks to:
 		*	header file. 
 *	couchbase lite sample
 	https://github.com/couchbase/couchbase-lite-net/tree/sharpen-pure/src/main
+
+	
+	
+# Xamarin.Android bindings
+
+## Bindings
+
+*	API know how
+	*	
+	*
+
+## Java to c#
+
+1.	Tangible		
+	[http://www.tangiblesoftwaresolutions.com/Product_Details/Java_to_CSharp_Converter.html](http://www.tangiblesoftwaresolutions.com/Product_Details/Java_to_CSharp_Converter.html)		
+	*	cons:
+		*	commercial
+		*	free up to 1000 lines
+	*	pros:
+		* worked for me
+2.	j2ctranslator eclipse plugin
+	[http://sourceforge.net/projects/j2cstranslator/](http://sourceforge.net/projects/j2cstranslator/)		
+	*	pros
+		* free
+	*	cons:
+		*	eclipse 3.4 (search discussions)
+		*	did not make it to work TODO
+3.	xes XML encoded source
+	[http://xes.sourceforge.net/](http://xes.sourceforge.net/)
+	*	pros
+		*	free
+	*	cons
+		*	complicated to use
+		*	sample ?!?!
+
+4.	sharpen
+	*	pros
+		*	powerful
+		*	free
+		*	works (I did not make it yet)
+	*	cons
+		*	PITA (few docs, gurus hard to get)
+		
+	

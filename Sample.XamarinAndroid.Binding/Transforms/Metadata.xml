@@ -1,0 +1,895 @@
+﻿<metadata>
+	<!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+
+
+	
+	<!--
+	===========================================================================================================
+	.net-ification of the namespace (java package)
+	
+		*	shortened (removed top level domain like com)
+		*	uppercase
+		*	pluralized
+
+
+
+	.netification/plurlization of namespaces (packages) will solve some of wranings 
+
+		~/Projects/HolisticWare/Components/Xamarin.Firebase/bindings/Firebase.XamarinAndroid.Binding/
+		BINDINGSGENERATOR: Warning BG8900: 
+		Type 
+			com.firebase.client.core.operation.Operation: 
+		FxDG naming violation: Type name 
+			'Operation' 
+		matches namespace part 'Operation'. 
+		(BG8900)
+		(Firebase.XamarinAndroid.Binding)
+	-->
+	<attr 
+		path="/api/package[@name='com.firebase.client']" 
+		name="managedName"
+		>
+		Firebase.Client
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.android']" 
+		name="managedName"
+		>
+		Firebase.Client.Android
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.authentication']" 
+		name="managedName"
+		>
+		Firebase.Client.Authentication		
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.authentication.util']" 
+		name="managedName"
+		>
+		Firebase.Client.Authentication.Util		
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.collection']" 
+		name="managedName"
+		>
+		Firebase.Client.Collection		
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.core']" 
+		name="managedName"
+		>
+		Firebase.Client.Core
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.core.operation']" 
+		name="managedName"
+		>
+		Firebase.Client.Core.Operations
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.core.utilities']" 
+		name="managedName"
+		>
+		Firebase.Client.Core.UtilitiesTools
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.core.view']" 
+		name="managedName"
+		>
+		Firebase.Client.Core.Views
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.core.view.filter']" 
+		name="managedName"
+		>
+		Firebase.Client.Core.Views.Filters
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.realtime']" 
+		name="managedName"
+		>
+		Firebase.Client.Realtime
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.realtime.util']" 
+		name="managedName"
+		>
+		Firebase.Client.Realtime.Util
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.snapshot']" 
+		name="managedName"
+		>
+		Firebase.Client.Snapshot
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.utilities']" 
+		name="managedName"
+		>
+		Firebase.Client.Utilities
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client.utilities.tuple']" 
+		name="managedName"
+		>
+		Firebase.Client.Utilities.Tuple
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.tubesock']" 
+		name="managedName"
+		>
+		Firebase.Client.Tubesock
+	</attr>
+		
+
+	<!--
+	===========================================================================================================
+	###	Fix/[re]solution/workaround
+
+	for:
+	
+	~/Projects/HolisticWare/Components/Xamarin.Firebase/bindings/Firebase.XamarinAndroid.Binding/obj/Debug/generated/src/Com.Shaded.Fasterxml.Jackson.Databind.Cfg.BaseSettings.cs(17,17)
+		: Error CS0645: 
+		Identifier too long (limit is 512 chars) 
+		(CS0645) 
+		(Firebase.XamarinAndroid.Binding)		
+		
+	by:
+
+		*	shortening fully qualified name (namespace - package in java)
+	-->
+		
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.annotation']" 
+		name="managedName"
+		>
+		SFJ.Annotation
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.core']" 
+		name="managedName"
+		>
+		SFJ.Core
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.core.base']" 
+		name="managedName"
+		>
+		SFJ.Core.Base
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.core.format']" 
+		name="managedName"
+		>
+		SFJ.Core.Format
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.core.io']" 
+		name="managedName"
+		>
+		SFJ.Core.Io
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.core.json']" 
+		name="managedName"
+		>
+		SFJ.Core.Json
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.core.sym']" 
+		name="managedName"
+		>
+		SFJ.Core.Sym
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.core.type']" 
+		name="managedName"
+		>
+		SFJ.Core.Type
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.core.util']" 
+		name="managedName"
+		>
+		SFJ.Core.Util
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.annotation']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Annotation
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.cfg']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Cfg
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.deser']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Deser
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.deser.impl']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Deser.Impl
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.deser.std']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Deser.Std
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.exc']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Exc
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.ext']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Ext
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.introspect']" 
+		name="managedName"
+		>		
+		SFJ.Dtbnd.Introspect
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.jsonFormatVisitors']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.JsonFotmatVisitors
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.jsonschema']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.JsonSchema
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.jsontype']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.JsonType
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.jsontype.impl']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.JsonType.Impl
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.module']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Modules
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.node']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Node
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.ser']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Ser
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.ser.impl']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Ser.Impl
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.ser.std']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Ser.Std
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.type']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Types
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.util']" 
+		name="managedName"
+		>
+		SFJ.Dtbnd.Util
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.commons.codec']" 
+		name="managedName"
+		>
+		Apache.Commons.Codecs
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.commons.codec.binary']" 
+		name="managedName"
+		>
+		Apache.Commons.Codecs.Binary
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.commons.codec.digest']" 
+		name="managedName"
+		>
+		Apache.Commons.Codecs.Digest
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.commons.codec.language']" 
+		name="managedName"
+		>
+		Apache.Commons.Codecs.Languages
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.commons.codec.language.bm']" 
+		name="managedName"
+		>
+		Apache.Commons.Codecs.Languages.Bm
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.commons.codec.net']" 
+		name="managedName"
+		>
+		Apache.Commons.Codecs.Net
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.commons.logging']" 
+		name="managedName"
+		>
+		Apache.Commons.Logging
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.commons.logging.impl']" 
+		name="managedName"
+		>
+		Apache.Commons.Logging.Impl
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http']" 
+		name="managedName"
+		>
+		Apache.Http
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.annotation']" 
+		name="managedName"
+		>
+		Apache.Http.Annotation
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.auth']" 
+		name="managedName"
+		>
+		Apache.Http.Auth
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.auth.params']" 
+		name="managedName"
+		>
+		Apache.Http.Auth.Params
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.client']" 
+		name="managedName"
+		>
+		Apache.Http.Client
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.client.config']" 
+		name="managedName"
+		>
+		Apache.Http.Client.Config
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.client.entity']" 
+		name="managedName"
+		>
+		Apache.Http.Client.Entities
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.client.methods']" 
+		name="managedName"
+		>
+		Apache.Http.Client.Methods
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.client.params']" 
+		name="managedName"
+		>
+		Apache.Http.Client.Params
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.client.protocol']" 
+		name="managedName"
+		>
+		Apache.Http.Client.Protocol
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.client.utils']" 
+		name="managedName"
+		>
+		Apache.Http.Client.Utils
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.concurrent']" 
+		name="managedName"
+		>
+		Apache.Http.Concurrent
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.config']" 
+		name="managedName"
+		>
+		Apache.Http.Config
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.conn']" 
+		name="managedName"
+		>
+		Apache.Http.Conn
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.conn.params']" 
+		name="managedName"
+		>
+		Apache.Http.Conn.Params
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.conn.routing']" 
+		name="managedName"
+		>
+		Apache.Http.Conn.Routing
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.conn.scheme']" 
+		name="managedName"
+		>
+		Apache.Http.Conn.Scheme
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.conn.socket']" 
+		name="managedName"
+		>
+		Apache.Http.Conn.Socket
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.conn.ssl']" 
+		name="managedName"
+		>
+		Apache.Http.Conn.Ssl
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.conn.util']" 
+		name="managedName"
+		>
+		Apache.Http.Conn.Util
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.cookie']" 
+		name="managedName"
+		>
+		Apache.Http.Cookies
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.cookie.params']" 
+		name="managedName"
+		>
+		Apache.Http.Cookies.Params
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.entity']" 
+		name="managedName"
+		>
+		Apache.Http.Entities
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.impl']" 
+		name="managedName"
+		>
+		Apache.Http.Impl
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.impl.auth']" 
+		name="managedName"
+		>
+		Apache.Http.Impl.Auth
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.impl.client']" 
+		name="managedName"
+		>
+		Apache.Http.Impl.Client
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.impl.conn']" 
+		name="managedName"
+		>
+		Apache.Http.Impl.Conn
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.impl.conn.tsccm']" 
+		name="managedName"
+		>
+		Apache.Http.Impl.Conn.Tsccm
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.impl.cookie']" 
+		name="managedName"
+		>
+		Apache.Http.Impl.Cookies
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.impl.entity']" 
+		name="managedName"
+		>
+		Apache.Http.Impl.Entities
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.impl.execchain']" 
+		name="managedName"
+		>
+		Apache.Http.Impl.ExecChains
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.impl.io']" 
+		name="managedName"
+		>
+		Apache.Http.Impl.Io
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.impl.pool']" 
+		name="managedName"
+		>
+		Apache.Http.Impl.Pool
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.io']" 
+		name="managedName"
+		>
+		Apache.Http.Io
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.message']" 
+		name="managedName"
+		>
+		Apache.Http.Messages
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.params']" 
+		name="managedName"
+		>
+		Apache.Http.Params
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.pool']" 
+		name="managedName"
+		>
+		Apache.Http.Pool
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.protocol']" 
+		name="managedName"
+		>
+		Apache.Http.Protocol
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.util']" 
+		name="managedName"
+		>
+		Apache.Http.Util
+	</attr>
+	
+	
+	<!--
+		Shortening even more (method names)
+	-->
+	
+	<!--
+		not shortening, but removing because of accessibility (private or protected)
+	-->
+	
+	<!--
+		Following method generates looong mambernames for parameters, because of concatenation
+			it has 12 parameters 
+			removing this node reduced errors from 51 to 24
+	-->
+	<remove-node
+		path="/api/package[@name='org.shaded.apache.http.impl.client']/class[@name='AbstractHttpClient']/method[@name='createClientRequestDirector']"
+		/>
+	<!--
+		Public constructor, but let us hope that it is not needed
+			it has 12 parameters 
+			removing this node reduced errors from 51 to 24
+	-->
+	<remove-node
+		path="/api/package[@name='org.shaded.apache.http.impl.client']/class[@name='DefaultRequestDirector']/constructor[@name='DefaultRequestDirector' and count(parameter)=12 and parameter[1][@type='org.shaded.apache.http.protocol.HttpRequestExecutor'] and parameter[2][@type='org.shaded.apache.http.conn.ClientConnectionManager'] and parameter[3][@type='org.shaded.apache.http.ConnectionReuseStrategy'] and parameter[4][@type='org.shaded.apache.http.conn.ConnectionKeepAliveStrategy'] and parameter[5][@type='org.shaded.apache.http.conn.routing.HttpRoutePlanner'] and parameter[6][@type='org.shaded.apache.http.protocol.HttpProcessor'] and parameter[7][@type='org.shaded.apache.http.client.HttpRequestRetryHandler'] and parameter[8][@type='org.shaded.apache.http.client.RedirectHandler'] and parameter[9][@type='org.shaded.apache.http.client.AuthenticationHandler'] and parameter[10][@type='org.shaded.apache.http.client.AuthenticationHandler'] and parameter[11][@type='org.shaded.apache.http.client.UserTokenHandler'] and parameter[12][@type='org.shaded.apache.http.params.HttpParams']]"
+		/>
+	
+	<!--
+		Public constructor, but let us hope that it is not needed
+			it has 12 parameters 
+			removing this node reduced errors from 51 to 24
+	-->
+	<remove-node
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.cfg']/class[@name='BaseSettings']/constructor[@name='BaseSettings' and count(parameter)=11 ]"		
+		/>
+
+	<!--
+		DID NOT HIT
+
+		copy form cs code
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.cfg']/class[@name='BaseSettings']/constructor[@name='BaseSettings' and count(parameter)=11 and parameter[1][@type='com.shaded.fasterxml.jackson.databind.introspect.ClassIntrospector'] and parameter[2][@type='com.shaded.fasterxml.jackson.databind.AnnotationIntrospector'] and parameter[3][@type='com.shaded.fasterxml.jackson.databind.introspect.VisibilityChecker'] and parameter[4][@type='com.shaded.fasterxml.jackson.databind.PropertyNamingStrategy'] and parameter[5][@type='com.shaded.fasterxml.jackson.databind.type.TypeFactory'] and parameter[6][@type='com.shaded.fasterxml.jackson.databind.jsontype.TypeResolverBuilder'] and parameter[7][@type='java.text.DateFormat'] and parameter[8][@type='com.shaded.fasterxml.jackson.databind.cfg.HandlerInstantiator'] and parameter[9][@type='java.util.Locale'] and parameter[10][@type='java.util.TimeZone'] and parameter[11][@type='com.shaded.fasterxml.jackson.core.Base64Variant']]"		
+
+		removed paramteres DID HIT!!
+	-->
+		
+	<!--
+	===========================================================================================================
+	###	Fix/[re]solution/workaround
+
+		~/Projects/HolisticWare/Components/Xamarin.Firebase/bindings/Firebase.XamarinAndroid.Binding/obj/Debug/generated/src/SFJ.Core.Sym.Name.cs(20,20)
+			: Error CS0542: 
+			`SFJ.Core.Sym.Name.Name': member names cannot be the same as their enclosing type 
+			(CS0542) 
+			(Firebase.XamarinAndroid.Binding)
+
+		~/Projects/HolisticWare/Components/Xamarin.Firebase/bindings/Firebase.XamarinAndroid.Binding/obj/Debug/generated/src/SFJ.Dtbnd.Deser.DataFormatReaders.cs(45,45)
+			: Error CS0542: 
+			`SFJ.Dtbnd.Deser.DataFormatReaders.Match.Match': member names cannot be the same as their enclosing type 
+			(CS0542)
+			(Firebase.XamarinAndroid.Binding)
+
+		Rename:
+			1.	field or (better and done here)
+			2.	class that contains this field
+
+	-->
+	<attr
+		path="/api/package[@name='com.shaded.fasterxml.jackson.core.sym']/class[@name='Name']/field[@name='_name']"
+		name="managedName"
+		>
+		NameField
+	</attr>
+
+	<attr
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.deser']/class[@name='DataFormatReaders.Match']/field[@name='_match']"
+		name="managedName"
+		>
+		MatchField
+	</attr>
+	
+	<!--
+	===========================================================================================================
+	###	Fix/[re]solution/workaround
+
+	for:
+	
+	~Projects/HolisticWare/Components/Xamarin.Firebase/bindings/Firebase.XamarinAndroid.Binding/obj/Debug/generated/src/Com.Firebase.Client.IValueEventListener.cs(45,45)
+		: Error CS0102: 
+		The type `Com.Firebase.Client.CancelledEventArgs' already contains a definition for `p0' 
+		(CS0102) 
+		(Firebase.XamarinAndroid.Binding)
+
+	~/Projects/HolisticWare/Components/Xamarin.Firebase/bindings/Firebase.XamarinAndroid.Binding/obj/Debug/generated/src/Firebase.Client.IValueEventListener.cs(48,48)
+		: Error CS0102: 
+		The type `Firebase.Client.CancelledEventArgs' already contains a definition for `P0' 
+		(CS0102) 
+		(Firebase.XamarinAndroid.Binding)
+
+
+	Analysis:
+
+		1.	EventArgs with Prefix "Cancel" => there must be method "onCancel*" for some implement
+		2.	find interfaces in the same namespace that must implement the same method: "onCancel*"
+			1.	com.firebase.client.ChildEventListener
+			2.	com.firebase.client.ValueEventListener
+
+			<interface abstract="true" deprecated="not deprecated" final="false" name="ValueEventListener" static="false" visibility="public">
+				<method abstract="true" deprecated="not deprecated" final="false" name="onCancelled" native="false" return="void" static="false" synchronized="false" visibility="public">
+					<parameter name="p0" type="com.firebase.client.FirebaseError">
+					</parameter>
+				</method>
+			</interface>
+
+			<interface abstract="true" deprecated="not deprecated" final="false" name="ChildEventListener" static="false" visibility="public">
+				<method abstract="true" deprecated="not deprecated" final="false" name="onCancelled" native="false" return="void" static="false" synchronized="false" visibility="public">
+					<parameter name="p0" type="com.firebase.client.FirebaseError">
+					</parameter>
+				</method>
+			</interface>
+
+		3. rename argName for each
+
+	-->
+
+	<attr 
+		path="/api/package[@name='com.firebase.client']/interface[@name='ChildEventListener']/method[@name='onCancelled']"
+		name="argsType"
+		>
+		ChildCancelScreenEventArgs
+	</attr>
+	<attr 
+		path="/api/package[@name='com.firebase.client']/interface[@name='ValueEventListener']/method[@name='onCancelled']"
+		name="argsType"
+		>
+		ValueCancelScreenEventArgs
+	</attr>
+
+
+	<!--
+	===========================================================================================================
+	===========================================================================================================
+	===========================================================================================================
+	## Generated c# code compilation
+
+	After initial 51 error and fixes from above, back to 405 errors
+	
+	tackling those below ...
+	
+	===========================================================================================================
+	===========================================================================================================
+	===========================================================================================================
+	-->
+	
+
+	<!--
+	===========================================================================================================
+	###	Fix/[re]solution/workaround
+
+	405 errors to go!
+
+	for:
+
+	~/Projects/HolisticWare/Components/Xamarin.Firebase/bindings/Firebase.XamarinAndroid.Binding/obj/Debug/generated/src/Apache.Commons.Codecs.Net.BCodec.cs(62,62)
+		: Error CS0234: 
+		The type or namespace name `SOME_CLASS_NAME' does not exist in the namespace `Apache.Commons.Codecs.Net'. 
+		Are you missing an assembly reference? (CS0234) (Firebase.XamarinAndroid.Binding)
+
+	The cause can be
+
+		1.	visibility not set (empty string) so the class was not surfaced
+		2.	
+
+		SOME_CLASS_NAME causing error from above
+						
+				class/type								cause
+
+				RFC1522Codec							visibility=""
+				DecompressingEntity						visibility=""
+				AuthenticationStrategyImpl				visibility=""
+				BaseReader								visibility=""
+				HttpRequestTaskCallable					visibility=""
+				BaseNodeDeserializer					visibility=""
+				SimpleAbstractTypeResolver				visibility="public" ???
+				SimpleKeyDeserializers					visibility="public" ???
+				SimpleDeserializers						visibility="public" ???
+				SimpleSerializers						visibility="public" ???
+				SimpleValueInstantiators				visibility="public" ???
+				SimpleModule							visibility="public" ???
+
+	[Re]Solution/workaround:
+
+		fix visibility=""
+	-->	
+
+	<attr 
+		path="/api/package[@name='org.shaded.apache.commons.codec.net']/class[@name='RFC1522Codec']"
+		name="visibility"
+		>
+		public
+	</attr>
+	
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.client.entity']/class[@name='DecompressingEntity']"
+		name="visibility"
+		>
+		public
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.impl.client']/class[@name='AuthenticationStrategyImpl']"
+		name="visibility"
+		>
+		public
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.core.io']/class[@name='BaseReader']"
+		name="visibility"
+		>
+		public
+	</attr>
+	<attr 
+		path="/api/package[@name='com.shaded.fasterxml.jackson.databind.deser.std']/class[@name='BaseNodeDeserializer']"
+		name="visibility"
+		>
+		public
+	</attr>
+	<attr 
+		path="/api/package[@name='org.shaded.apache.http.impl.client']/class[@name='HttpRequestTaskCallable']"
+		name="visibility"
+		>
+		public
+	</attr>
+	<attr 
+		path="/api/package[@name='AAAAA']/class[@name='BBBBl']"
+		name="visibility"
+		>
+		public
+	</attr>
+	<attr 
+		path="/api/package[@name='AAAAA']/class[@name='BBBBl']"
+		name="visibility"
+		>
+		public
+	</attr>
+	<attr 
+		path="/api/package[@name='AAAAA']/class[@name='BBBBl']"
+		name="visibility"
+		>
+		public
+	</attr>
+	<attr 
+		path="/api/package[@name='AAAAA']/class[@name='BBBBl']"
+		name="visibility"
+		>
+		public
+	</attr>
+	<attr 
+		path="/api/package[@name='AAAAA']/class[@name='BBBBl']"
+		name="visibility"
+		>
+		public
+	</attr>
+	<attr 
+		path="/api/package[@name='AAAAA']/class[@name='BBBBl']"
+		name="visibility"
+		>
+		public
+	</attr>
+
+	<!--
+	===========================================================================================================
+	###	Fix/[re]solution/workaround
+
+	330 errors to go!
+
+	for:
+
+
+	~/Projects/HolisticWare/Components/Xamarin.Firebase/bindings/Firebase.XamarinAndroid.Binding/obj/Debug/generated/src/SFJ.Dtbnd.Deser.Std.DateDeserializers.cs(24,24)
+		: Error CS0060: 
+		Inconsistent accessibility: base class `SFJ.Dtbnd.Deser.Std.DateDeserializers.DateBasedDeserializer' 
+		is less accessible than class `SFJ.Dtbnd.Deser.Std.DateDeserializers.CalendarDeserializer' 
+		(CS0060) 
+		(Firebase.XamarinAndroid.Binding)
+
+	[Re]Solution/workaround:
+
+		make less accessible class more accessible
+	-->
+
+</metadata>
