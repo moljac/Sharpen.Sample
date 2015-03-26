@@ -74,7 +74,7 @@ update the Plugin:
 
 
 
-## Java to c#
+## Java to csharp
 
 1.	Tangible		
 	[http://www.tangiblesoftwaresolutions.com/Product_Details/Java_to_CSharp_Converter.html](http://www.tangiblesoftwaresolutions.com/Product_Details/Java_to_CSharp_Converter.html)		
@@ -90,7 +90,7 @@ update the Plugin:
 	*	cons:
 		*	eclipse 3.4 (search discussions)
 		*	did not make it to work TODO
-3.	xes XML encoded source
+3.	xes XML encoded source			
 	[http://xes.sourceforge.net/](http://xes.sourceforge.net/)
 	[http://www.euclideanspace.com/software/language/xes/userGuide/index.htm](http://www.euclideanspace.com/software/language/xes/userGuide/index.htm)
 	[http://www.euclideanspace.com/software/language/xes/userGuide/convert/javaToCSharp/](http://www.euclideanspace.com/software/language/xes/userGuide/convert/javaToCSharp/)
