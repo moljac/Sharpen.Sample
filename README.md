@@ -7,8 +7,6 @@ Thanks to:
 *	Zack Gramana
 
 
-
-
 *	sharpen		
 	clone this repo: https://github.com/slluis/sharpen
 	*	Eclipse plugin, 
@@ -23,14 +21,58 @@ Thanks to:
 	https://github.com/couchbase/couchbase-lite-net/tree/sharpen-pure/src/main
 
 	
-	
-# Xamarin.Android bindings
+## References/Links
 
-## Bindings
+*	[https://github.com/mono/sharpen](https://github.com/mono/sharpen)
+*	[https://github.com/moljac/XobotOS/tree/master/sharpen](https://github.com/moljac/XobotOS/tree/master/sharpen)	
+*	[https://github.com/couchbase/couchbase-lite-net](https://github.com/couchbase/couchbase-lite-net)
+*	[https://github.com/mono/ngit](https://github.com/mono/ngit)
+*	[https://github.com/moljac/sharpen](https://github.com/moljac/sharpen)
+*	[https://github.com/mono/sharpen](https://github.com/mono/sharpen)
+*	[http://pauldb.tumblr.com/post/14916717048/a-guide-to-sharpen-a-great-tool-for-converting](http://pauldb.tumblr.com/post/14916717048/a-guide-to-sharpen-a-great-tool-for-converting)
+*	[https://forums.xamarin.com/discussion/62/using-sharpen-for-existing-android-code-base](https://forums.xamarin.com/discussion/62/using-sharpen-for-existing-android-code-base)
+*	[]()
 
-*	API know how
-	*	
-	*
+
+
+## Sharpen 
+
+### Installation
+
+#### XobotOS 
+
+1	install in Eclipse:			
+	Go to Help / Install New Software
+2	Add / Local, specify location of the sharpen.site directory		
+	(like /work/workspace/XobotOS/sharpen/sharpen.site), choose a
+	name of your choice (for instance "Local Sharpen")
+*	In the "Available Software" dialog, "Work With" should now point	
+	to the newly added repository.
+*	Select "Sharpen", install
+
+update the Plugin:
+
+
+*	Update the module from Github
+*	In Eclipse, go to Help / Check for Updates,
+	this should automatically
+  
+ manually update:
+ 
+* 	Open sharpen.site/site.xml in Eclipse, this should open the			
+	"Site Manifest Editor"
+*	Select "Site Map".
+*	In the listbox, you should see the latest version of the plugin,	
+	for instance "sharpen (1.0.0.201110281652)
+* 	Right-click, then remove it
+* 	Click on "Add feature", then type "sharpen" into the dialog that
+	opens.
+*	Select "sharpen (1.0.0.qualifier)"
+* 	Click on "Build All".
+*	File / Save All  
+
+
+
 
 ## Java to c#
 
@@ -66,4 +108,24 @@ Thanks to:
 	*	cons
 		*	PITA (few docs, gurus hard to get)
 		
+		
+### XES Sample
+
+1.	launch xes
+	java -jar ./xes.jar 
+3.	load XSLT (java 2 c#)
+	./xes/toCSharp.xsl
+	~/Projects/HolisticWare/Sharpen.Sample.Minimal/sbin/xes/toCSharp.xsl	
+2.	load sample
+	~/Projects/HolisticWare/Sharpen.Sample.Minimal/Samples.Eclipse/SamsungSDK.Pass/Samples/Pass/src/com/samsung/android/sdk/pass/sample/SampleActivity.java
+
+		
+		
+	
+## Xamarin.Android bindings
+
+*	API know how
+	*	
+	*
+
 	
